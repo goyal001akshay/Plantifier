@@ -1,0 +1,55 @@
+<link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+<div class="row overflow_hidden">
+  <div class="col-md-12">
+      <video autoplay loop id="myVideo">
+        <source src="../assets/nature.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+      </video>
+      <div class="center1">
+        <div class="row">
+          <div class="col-md">
+                <h1 class="text font_style">Detect the Flower Image!!!</h1>
+          </div>
+        </div>
+        <div class="row top">
+          <div class="col-md-6">
+
+            <img [src]="url" class="imgrose"> <br/>
+            <!-- <img src="../assets/camera.png" class="icon" > -->
+
+            <a class="img_upload" aria-hidden="true" (click)="fileInput.click()">
+                <input type='file' (change)="onFileChanged($event)" style="display:none" #fileInput>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <div class="font_style para">
+              <div *ngIf="flowerCode">
+                <div *ngFor="let data of outputData">
+                  <div *ngIf="data.id == flowerCode">
+                    <h1>{{data.name}}</h1>
+                    <h4><span style="font-weight: bold">Toxic : </span>{{data.poisnous}}</h4>
+                    <h4><span style="font-weight: bold">Impact : </span>{{data.impact}}</h4>
+                    <h4><span style="font-weight: bold">Edible :</span> {{data.edible}}</h4>
+                    <h4><span style="font-weight: bold">Medicinal Uses : </span></h4>
+                    <ul>
+                      <div *ngFor="let medi of data.medicinal_value">
+                        <li style="font-size: 18px">{{medi}}</li>
+                      </div>
+                    </ul>
+                    <div *ngIf="data.poisnous == 'Yes'">
+                      <h4><span style="font-weight: bold">Instant Remdey : </span><a (click)="display()">{{data.remedy}}</a></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <input class="btn btt" value="Detect" (click)="detectInformation()" type="button">
+      </div>
+      </div>
+    <!-- <input type="image" src="http://upload.wikimedia.org/wikipedia/commons/c/ca/Button-Lightblue.svg" width="30px"/>
+    <input type="file" id="my_file" style="display: none;" /> -->
+  </div>
+
+<router-outlet></router-outlet>
