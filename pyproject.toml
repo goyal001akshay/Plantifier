@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "atipcore"
+version = "0.1.1"
+description = "ATIP Core Model"
+authors = ["chandrakanta pal"]
+
+[tool.poetry.dependencies]
+python = "^3.6.7"
+flask = "^1.0"
+kanpai="0.1.9"
+numpy = "^1.16"
+fuzzywuzzy = "^0.17.0"
+python-Levenshtein = "^0.12.0"
+pandas = "^0.24.2"
+sklearn = "^0.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+autopep8 = "1.4.3"
+flake8 = "3.7.4"
+
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

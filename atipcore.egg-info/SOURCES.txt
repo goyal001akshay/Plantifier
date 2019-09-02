@@ -1,0 +1,14 @@
+setup.cfg
+atipcore/__init__.py
+atipcore/app_factory.py
+atipcore/cosine_similarity.py
+atipcore/errorhandler.py
+atipcore/ext.py
+atipcore/ml_model.py
+atipcore/scorer.py
+atipcore/test.py
+atipcore.egg-info/PKG-INFO
+atipcore.egg-info/SOURCES.txt
+atipcore.egg-info/dependency_links.txt
+atipcore.egg-info/requires.txt
+atipcore.egg-info/top_level.txt

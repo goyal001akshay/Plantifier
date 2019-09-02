@@ -1,0 +1,7 @@
+flask<2.0,>=1.0
+fuzzywuzzy<0.18.0,>=0.17.0
+kanpai==0.1.9
+numpy<2.0,>=1.16
+pandas<0.25.0,>=0.24.2
+python-Levenshtein<0.13.0,>=0.12.0
+sklearn<0.0.1,>=0.0.0
